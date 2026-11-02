@@ -3,6 +3,10 @@ import pytest
 from calculator import calculate_average, is_passing, get_grade
 
 
+def test_passing_grade_is_exactly_ten():
+    assert is_passing(10) is True
+
+
 def test_calculate_average():
     assert calculate_average([10, 12, 14]) == 12
 
