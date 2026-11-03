@@ -1,6 +1,10 @@
-
 import pytest
-from calculator import calculate_average, is_passing, get_grade
+from calculator import (
+    calculate_average,
+    is_passing,
+    get_grade,
+    get_grade_category,
+)
 
 
 def test_passing_grade_is_exactly_ten():
@@ -35,3 +39,10 @@ def test_invalid_average():
 
     with pytest.raises(ValueError):
         get_grade(21)
+
+
+def test_grade_categories():
+    assert get_grade_category(17) == "Excellent"
+    assert get_grade_category(13) == "Good"
+    assert get_grade_category(10.5) == "Average"
+    assert get_grade_category(7) == "Fail"
