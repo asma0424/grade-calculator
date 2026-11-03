@@ -22,3 +22,14 @@ def get_grade(average):
         return "D"
     else:
         return "F"
+
+
+def get_grade_category(average):
+    if average >= 16:
+        return "Excellent"
+    elif average >= 12:
+        return "Good"
+    elif average >= 10:
+        return "Average"
+    else:
+        return "Fail"
